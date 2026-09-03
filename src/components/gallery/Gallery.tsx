@@ -1,7 +1,7 @@
-import { artworks, type Artwork } from "@/data/artworks";
+import { artworks } from "@/data/artworks";
 import { ArtworkCard } from "@/components/gallery/ArtworkCard";
 
-function artworkAt(index: number): Artwork {
+function artworkAt(index: number) {
   const artwork = artworks[index];
   if (!artwork) {
     throw new Error(`Œuvre manquante à l’index ${index}`);

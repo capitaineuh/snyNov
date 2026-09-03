@@ -1,83 +1,70 @@
-export interface Artwork {
-  id: string;
-  title: string;
-  year: number;
-  medium: string;
-  dimensions: string;
-  imageUrl: string;
-  artsyUrl: string;
-  aspect: number;
-}
-
-export const EXHIBITION_NAME = "Novembre";
-export const EXHIBITION_YEAR = 2026;
-export const ARTIST_NAME = "Seny";
+import type { Artwork } from "@/components/gallery/ArtworkCard";
 
 export const artworks: Artwork[] = [
   {
-    id: "nocturne-iv",
-    title: "Nocturne IV",
-    year: 2025,
-    medium: "Huile sur lin",
-    dimensions: "180 × 140 cm",
-    imageUrl:
-      "https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=1800&q=80",
-    artsyUrl: "https://www.artsy.net/artwork/seny-nocturne-iv",
-    aspect: 0.78,
+    title: "Toile 1",
+    description: "Description de la toile 1",
+    image: "/assets/1.png",
+    aspect: "16/9",
+    imageUrl: "/assets/1.png",
+    year: "2026",
+    medium: "Peinture à l'huile",
+    dimensions: "120x90 cm",
+    artsyUrl: "https://www.artsy.net/artwork/toile1",
   },
   {
-    id: "chambre-ocre",
-    title: "Chambre ocre",
-    year: 2024,
-    medium: "Huile et cire sur toile",
-    dimensions: "120 × 160 cm",
-    imageUrl:
-      "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1600&q=80",
-    artsyUrl: "https://www.artsy.net/artwork/seny-chambre-ocre",
-    aspect: 1.25,
+    title: "Toile 2",
+    description: "Description de la toile 2",
+    image: "/assets/2.png",
+    aspect: "4/3",
+    imageUrl: "/assets/2.png",
+    year: "2026",
+    medium: "Acrylique",
+    dimensions: "90x60 cm",
+    artsyUrl: "https://www.artsy.net/artwork/toile2",
   },
   {
-    id: "seuil",
-    title: "Seuil",
-    year: 2025,
-    medium: "Acrylique et pigment sur coton",
-    dimensions: "90 × 70 cm",
-    imageUrl:
-      "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?auto=format&fit=crop&w=1400&q=80",
-    artsyUrl: "https://www.artsy.net/artwork/seny-seuil",
-    aspect: 0.72,
+    title: "Toile 3",
+    description: "Description de la toile 3",
+    image: "/assets/3.png",
+    aspect: "1/1",
+    imageUrl: "/assets/3.png",
+    year: "2026",
+    medium: "Graphite",
+    dimensions: "80x80 cm",
+    artsyUrl: "https://www.artsy.net/artwork/toile3",
   },
   {
-    id: "pluie-de-cendres",
-    title: "Pluie de cendres",
-    year: 2023,
-    medium: "Technique mixte sur toile",
-    dimensions: "200 × 160 cm",
-    imageUrl:
-      "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=1800&q=80",
-    artsyUrl: "https://www.artsy.net/artwork/seny-pluie-de-cendres",
-    aspect: 0.82,
+    title: "Toile 4",
+    description: "Description de la toile 4",
+    image: "/assets/4.png",
+    aspect: "9/16",
+    imageUrl: "/assets/4.png",
+    year: "2026",
+    medium: "Pastel",
+    dimensions: "60x90 cm",
+    artsyUrl: "https://www.artsy.net/artwork/toile4",
   },
   {
-    id: "horizon-bas",
-    title: "Horizon bas",
-    year: 2024,
-    medium: "Huile sur bois",
-    dimensions: "65 × 81 cm",
-    imageUrl:
-      "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?auto=format&fit=crop&w=1400&q=80",
-    artsyUrl: "https://www.artsy.net/artwork/seny-horizon-bas",
-    aspect: 1.15,
+    title: "Toile 5",
+    description: "Description de la toile 5",
+    image: "/assets/5.png",
+    aspect: "3/4",
+    imageUrl: "/assets/5.png",
+    year: "2026",
+    medium: "Aquarelle",
+    dimensions: "70x50 cm",
+    artsyUrl: "https://www.artsy.net/artwork/toile5",
   },
   {
-    id: "memoire-bleue",
-    title: "Mémoire bleue",
-    year: 2025,
-    medium: "Huile sur lin",
-    dimensions: "150 × 110 cm",
-    imageUrl:
-      "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?auto=format&fit=crop&w=1600&q=80",
-    artsyUrl: "https://www.artsy.net/artwork/seny-memoire-bleue",
-    aspect: 0.68,
+    title: "Toile 6",
+    description: "Description de la toile 6",
+    image: "/assets/6.png",
+    aspect: "2/3",
+    imageUrl: "/assets/6.png",
+    year: "2026",
+    medium: "Collage",
+    dimensions: "100x60 cm",
+    artsyUrl: "https://www.artsy.net/artwork/toile6",
   },
 ];

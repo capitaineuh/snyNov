@@ -3,9 +3,9 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
-  ARTIST_NAME,
-  EXHIBITION_NAME,
-  EXHIBITION_YEAR,
+  //ARTIST_NAME,
+  //EXHIBITION_NAME,
+  //EXHIBITION_YEAR,
 } from "@/data/artworks";
 
 export function HeroPinned() {
@@ -39,7 +39,7 @@ export function HeroPinned() {
     <section
       ref={containerRef}
       className="relative h-[450vh] bg-[#0d0d0d]"
-      aria-label={`${ARTIST_NAME}, ${EXHIBITION_NAME} ${EXHIBITION_YEAR}`}
+      aria-label={`'SENY', 'Novembre', '2026'`}
     >
       <div className="sticky top-0 h-screen w-full overflow-hidden">
         <motion.div
@@ -70,13 +70,13 @@ export function HeroPinned() {
               className="font-serif text-[18vw] font-medium leading-[0.85] tracking-[0.08em] text-[#f5f5f5] sm:text-[14vw] md:text-[11rem]"
               style={{ opacity: titleOpacity, scale: titleScale }}
             >
-              {ARTIST_NAME.toUpperCase()}
+              {"SENY"}
             </motion.h1>
             <motion.p
               className="mt-8 max-w-xl font-sans text-[11px] uppercase tracking-[0.42em] text-[#f5f5f5]/80 sm:text-xs"
               style={{ opacity: subtitleOpacity, y: subtitleY }}
             >
-              Exposition {EXHIBITION_YEAR} — {EXHIBITION_NAME}
+              Exposition {"2026"} — {"Novembre"}
             </motion.p>
           </div>
         </motion.div>

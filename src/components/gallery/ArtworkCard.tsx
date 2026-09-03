@@ -2,8 +2,19 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import type { Artwork } from "@/data/artworks";
 import { cn } from "@/lib/cn";
+
+export type Artwork = {
+  title: string;
+  description: string;
+  image: string;
+  aspect: string;
+  imageUrl: string;
+  year: string;
+  medium: string;
+  dimensions: string;
+  artsyUrl: string;
+};
 
 type ArtworkCardProps = {
   artwork: Artwork;
