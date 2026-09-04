@@ -33,12 +33,7 @@ export function ArtistStatement() {
           assez longtemps pour qu’on y entre. »
         </blockquote>
         <p className="mt-10 max-w-xl font-sans text-sm leading-7 tracking-[0.02em] text-[#888888]">
-          Seny travaille l’huile comme une matière lente. Les toiles de{" "}
-          <em className="not-italic text-[#c8c8c8]">Novembre</em> explorent le
-          seuil entre figure et atmosphère : des chambres d’ocre, des horizons
-          abaissés, des bleus qui se souviennent de la nuit. L’exposition
-          rassemble six œuvres récentes, conçues pour être vues de loin, puis
-          approchées jusqu’au grain.
+          Seny is a street artist from the suburbs of Paris. Educated at the École Boulle, Seny’s technical mastery originated in his childhood spent drawing and experimenting with collage, sculpture, and painting. This curiosity and his sensitivity led the young artist to take a unique and personal look at the world of innocence. A vision inspired by the powerful expressions of his models, but also by his own experience, relays his interpretation of the world. He makes his works from stencils, mixing spray-paint, acrylic, and Posca. He likes to experiment and risk new combinations of materials and supports.
         </p>
         <p className="mt-8 font-sans text-[11px] uppercase tracking-[0.28em] text-[#888888]">
           Seny — Paris, 2026

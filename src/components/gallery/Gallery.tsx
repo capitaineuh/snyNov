@@ -43,8 +43,8 @@ export function Gallery() {
       <div className="flex flex-col gap-28 lg:gap-40">
         <ArtworkCard
           artwork={featured}
-          className="mx-auto w-full max-w-5xl"
-          sizes="(max-width: 1024px) 100vw, 64vw"
+          className="mx-auto w-full max-w-6xl xl:max-w-7xl"
+          sizes="(max-width: 1280px) 100vw, 80vw"
         />
 
         <div className="grid grid-cols-1 items-end gap-16 md:grid-cols-12 md:gap-10 lg:gap-16">

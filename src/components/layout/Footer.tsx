@@ -23,7 +23,7 @@ export function Footer() {
             studio@seny.art
           </a>
           <a
-            href="https://www.artsy.net"
+            href="https://www.artsy.net/artist/seny"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors duration-500 hover:text-[#f5f5f5]"
