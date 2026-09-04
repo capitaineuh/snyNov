@@ -16,23 +16,28 @@ export function HeroPinned() {
     offset: ["start start", "end end"],
   });
 
+  // "Seny" apparaît plus tôt, presque dès les premiers scroll, et reste visible un bon moment
   const titleOpacity = useTransform(
     scrollYProgress,
-    [0, 0.32, 0.58, 0.72, 1],
-    [0, 0, 1, 1, 0],
+    [0, 0.05, 0.35, 0.78, 0.95],
+    [0, 1, 1, 1, 0],
   );
   const titleScale = useTransform(
     scrollYProgress,
-    [0.32, 0.58, 0.72, 1],
+    [0.05, 0.35, 0.78, 0.95],
     [0.94, 1, 1, 0.98],
   );
+
+  // "Exposition 2026 — Novembre" apparaît un peu après et reste un peu plus longtemps avant le fondu
   const subtitleOpacity = useTransform(
     scrollYProgress,
-    [0, 0.52, 0.74, 1],
-    [0, 0, 1, 0],
+    [0, 0.15, 0.42, 0.82, 0.96],
+    [0, 0, 1, 1, 0],
   );
-  const subtitleY = useTransform(scrollYProgress, [0.52, 0.74], [16, 0]);
-  const stageOpacity = useTransform(scrollYProgress, [0.72, 1], [1, 0]);
+  const subtitleY = useTransform(scrollYProgress, [0.15, 0.42], [16, 0]);
+
+  // Fondu global de la scène vers la galerie un peu plus tardif
+  const stageOpacity = useTransform(scrollYProgress, [0.78, 1], [1, 0]);
   const videoScale = useTransform(scrollYProgress, [0, 1], [1, 1.06]);
 
   return (
@@ -84,3 +89,4 @@ export function HeroPinned() {
     </section>
   );
 }
+

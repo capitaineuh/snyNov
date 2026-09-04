@@ -60,11 +60,11 @@ Lenis pilote le scroll natif (pas un transform), donc `useScroll` de Framer Moti
 - Le `<section>` fait **450vh** ; à l'intérieur, un `div.sticky.top-0.h-screen` reste épinglé pendant que la section défile.
 - `useScroll({ target: containerRef, offset: ["start start", "end end"] })` → `scrollYProgress` de 0 à 1 sur les 450vh.
 - `useTransform` mappe la progression :
-  - `titleOpacity` : `[0, 0.32, 0.58, 0.72, 1] → [0, 0, 1, 1, 0]` — le titre « SENY » apparaît entre 32 % et 58 %, disparaît vers la fin ;
+  - `titleOpacity` : `[0, 0.05, 0.35, 0.78, 0.95] → [0, 1, 1, 1, 0]` — le titre « SENY » apparaît presque dès les premiers scroll et reste visible jusqu'à la fin de la séquence ;
   - `titleScale` : `0.94 → 1 → 0.98` (zoom subtil) ;
-  - `subtitleOpacity` : fondu entre 52 % et 74 % ; `subtitleY` : `16px → 0` (glisse vers le haut) ;
+  - `subtitleOpacity` : fondu entre 15 % et 82 % ; `subtitleY` : `16px → 0` (glisse vers le haut) — reste un peu plus longtemps avant le fondu ;
   - `videoScale` : `1 → 1.06` sur toute la durée (zoom lent de la vidéo) ;
-  - `stageOpacity` : `1 → 0` entre 72 % et 100 % — toute la scène (vidéo incluse) s'estompe pour laisser place à la galerie.
+  - `stageOpacity` : `1 → 0` entre 78 % et 100 % — toute la scène (vidéo incluse) s'estompe pour laisser place à la galerie.
 - Vidéo de fond : `/assets/intro.mp4` avec `muted autoPlay loop playsInline` (indispensable pour le mobile), overlay gradient sombre, titre en Cormorant `text-[18vw]` (responsive via vw, `md:text-[11rem]`).
 
 ### 4.3 Galerie (`Gallery.tsx` + `ArtworkCard.tsx`)
@@ -94,17 +94,3 @@ Lenis pilote le scroll natif (pas un transform), donc `useScroll` de Framer Moti
 - Sync scroll ↔ Framer Motion : `useScroll({ target, offset })` + `useTransform()`.
 - Vidéos : toujours `muted playsInline autoPlay loop`.
 - Structure modulaire : `src/components/<section>/`, `src/data/`.
-
-## 7. ⚠️ Points d'attention / incohérences connues
-
-1. ✅ **Bug d'assets (corrigé)** : `src/data/artworks.ts` pointait vers `/assets/1.jpg` … `/assets/6.jpg` alors que `public/assets/` contient des **`.png`** → liens corrigés en `.png` le 03/09/2026.
-2. **Poster manquant** : `HeroPinned.tsx` référence `poster="/assets/intro-poster.jpg"` qui n'existe pas dans `public/` (la vidéo `intro.mp4` existe en revanche).
-3. **Code mort** dans `HeroPinned.tsx` : import commenté de `ARTIST_NAME`, `EXHIBITION_NAME`, `EXHIBITION_YEAR` depuis `@/data/artworks` — ces constantes n'existent pas ; le nom de l'artiste est en dur dans le JSX.
-4. **Données redondantes** : le type `Artwork` porte `image` ET `imageUrl` (toujours identiques) ; `description` n'est jamais affiché. Le type est défini dans `ArtworkCard.tsx` (client) et ré-importé par `artworks.ts` (fonctionnel mais inusuel).
-5. `next.config.ts` autorise le domaine `localhost` pour `next/image` — inutile, toutes les images sont locales.
-6. ⚠️ **Next.js 16** : APIs/conventions possiblement différentes de la version « connue » — lire la doc dans `node_modules/next/dist/docs/` avant de modifier des fichiers app/ (règle de `AGENTS.md`, re-ajoutée par `next dev`).
-
-## 8. Données actuelles
-
-6 toiles dans `src/data/artworks.ts` : `Toile 1` … `Toile 6`, toutes 2026, techniques variées (huile, acrylique, graphite, pastel, aquarelle, collage), dimensions et liens Artsy (`artsy.net/artwork/toileN` — URLs de placeholder).
-
